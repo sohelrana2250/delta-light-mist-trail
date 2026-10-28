@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Dhanmondi Rooms — ধানমন্ডিতে বাসা, মেস ও সাবলেট",
+      "hasCanvas": false,
+      "bodyTextLen": 3452,
+      "bodyTextHash": "5617635e8f5c1f45f4b72b4b026e61f70d48e66d209b00f104dc9ffa7eb10487",
+      "bodyTextPrefix": "Dhanmondi Rooms FIND YOUR ROOM, IN DHANMONDI MY ACCOUNT অ্যাকাউন",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dev-home.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Dhanmondi Rooms — ধানমন্ডিতে বাসা, মেস ও সাবলেট",
+      "hasCanvas": false,
+      "bodyTextLen": 3510,
+      "bodyTextHash": "e0f83f2096e21fea921aa8eb3b67e6e3b15becf15c1d3fbc5a27c4076970bad4",
+      "bodyTextPrefix": "Dhanmondi Rooms FIND YOUR ROOM, IN DHANMONDI ধানমন্ডিতে বাসা, মে",
+      "horizontalOverflow": true,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/dev-home-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/dev-home.json"
+}

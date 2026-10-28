@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face {
+    font-family: "Outfit";
+    font-weight: 500;
+    font-style: normal;
+    src: url("fonts/Outfit-500.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Outfit";
+    font-weight: 700;
+    font-style: normal;
+    src: url("fonts/Outfit-700.ttf") format("truetype");
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #0E1726;
+    font-family: "Outfit", "Liberation Sans", sans-serif;
+  }
+  .stage { position: relative; width: 1200px; height: 630px; }
+  svg.scene { position: absolute; inset: 0; display: block; }
+  .lockup {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+  }
+  .eyebrow {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.46em;
+    color: #1F5EFF;
+    padding-left: 0.46em;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 0.88;
+    letter-spacing: -0.035em;
+    color: #ffffff;
+  }
+  h1 span { display: block; }
+  .rule {
+    width: 92px;
+    height: 5px;
+    border-radius: 99px;
+    background: #1F5EFF;
+    margin: 22px 0 18px;
+  }
+  .tag {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 26px;
+    letter-spacing: 0.01em;
+    color: #F4F7FB;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 99px;
+    background: #1FA855;
+    box-shadow: 0 0 0 6px rgba(31, 168, 85, 0.22);
+  }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <svg class="scene" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#15233C"/>
+          <stop offset="48%" stop-color="#0E1726"/>
+          <stop offset="100%" stop-color="#0B1220"/>
+        </linearGradient>
+        <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3D74FF"/>
+          <stop offset="55%" stop-color="#1F5EFF"/>
+          <stop offset="100%" stop-color="#163EBE"/>
+        </linearGradient>
+        <linearGradient id="facade" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FFFFFF"/>
+          <stop offset="100%" stop-color="#E6EDF7"/>
+        </linearGradient>
+        <radialGradient id="glow" cx="50%" cy="32%" r="48%">
+          <stop offset="0%" stop-color="#1F5EFF" stop-opacity="0.28"/>
+          <stop offset="70%" stop-color="#1F5EFF" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+
+      <rect width="1200" height="630" fill="url(#sky)"/>
+      <rect width="1200" height="630" fill="url(#glow)"/>
+
+      <!-- distant treeline -->
+      <g fill="#1FA855" opacity="0.35">
+        <ellipse cx="90" cy="468" rx="46" ry="22"/>
+        <ellipse cx="210" cy="474" rx="38" ry="16"/>
+        <ellipse cx="980" cy="470" rx="52" ry="20"/>
+        <ellipse cx="1110" cy="476" rx="40" ry="16"/>
+      </g>
+
+      <!-- mid-rise blocks, lakeside -->
+      <g>
+        <!-- far left low block -->
+        <g transform="translate(48,418)">
+          <rect width="132" height="132" rx="2" fill="url(#facade)"/>
+          <rect y="0" width="132" height="8" fill="#0E1726"/>
+          <g fill="#0E1726" opacity="0.82">
+            <rect x="14" y="22" width="22" height="16" rx="1"/>
+            <rect x="46" y="22" width="22" height="16" rx="1"/>
+            <rect x="78" y="22" width="22" height="16" rx="1"/>
+            <rect x="14" y="48" width="22" height="16" rx="1"/>
+            <rect x="46" y="48" width="22" height="16" rx="1"/>
+            <rect x="78" y="48" width="22" height="16" rx="1"/>
+            <rect x="14" y="74" width="22" height="16" rx="1"/>
+            <rect x="78" y="74" width="22" height="16" rx="1"/>
+          </g>
+          <rect x="48" y="96" width="28" height="36" rx="1" fill="#1FA855"/>
+        </g>
+
+        <!-- taller left block -->
+        <g transform="translate(196,360)">
+          <rect width="168" height="190" rx="2" fill="url(#facade)"/>
+          <rect width="168" height="10" fill="#1F5EFF"/>
+          <g fill="#0E1726" opacity="0.85">
+            <rect x="16" y="26" width="26" height="18" rx="1"/>
+            <rect x="52" y="26" width="26" height="18" rx="1"/>
+            <rect x="88" y="26" width="26" height="18" rx="1"/>
+            <rect x="124" y="26" width="26" height="18" rx="1"/>
+            <rect x="16" y="56" width="26" height="18" rx="1"/>
+            <rect x="52" y="56" width="26" height="18" rx="1"/>
+            <rect x="88" y="56" width="26" height="18" rx="1"/>
+            <rect x="124" y="56" width="26" height="18" rx="1"/>
+            <rect x="16" y="86" width="26" height="18" rx="1"/>
+            <rect x="52" y="86" width="26" height="18" rx="1"/>
+            <rect x="88" y="86" width="26" height="18" rx="1"/>
+            <rect x="124" y="86" width="26" height="18" rx="1"/>
+            <rect x="16" y="116" width="26" height="18" rx="1"/>
+            <rect x="124" y="116" width="26" height="18" rx="1"/>
+          </g>
+          <rect x="62" y="142" width="36" height="48" rx="1.5" fill="#1FA855"/>
+          <!-- balcony rails -->
+          <g stroke="#1F5EFF" stroke-width="2" fill="none" opacity="0.9">
+            <path d="M14 148 h140"/>
+            <path d="M14 148 v8 M42 148 v8 M70 148 v8 M98 148 v8 M126 148 v8 M154 148 v8"/>
+          </g>
+        </g>
+
+        <!-- right taller block -->
+        <g transform="translate(836,348)">
+          <rect width="176" height="202" rx="2" fill="url(#facade)"/>
+          <rect width="176" height="10" fill="#1F5EFF"/>
+          <g fill="#0E1726" opacity="0.85">
+            <rect x="16" y="26" width="28" height="18" rx="1"/>
+            <rect x="54" y="26" width="28" height="18" rx="1"/>
+            <rect x="92" y="26" width="28" height="18" rx="1"/>
+            <rect x="130" y="26" width="28" height="18" rx="1"/>
+            <rect x="16" y="56" width="28" height="18" rx="1"/>
+            <rect x="54" y="56" width="28" height="18" rx="1"/>
+            <rect x="92" y="56" width="28" height="18" rx="1"/>
+            <rect x="130" y="56" width="28" height="18" rx="1"/>
+            <rect x="16" y="86" width="28" height="18" rx="1"/>
+            <rect x="54" y="86" width="28" height="18" rx="1"/>
+            <rect x="92" y="86" width="28" height="18" rx="1"/>
+            <rect x="130" y="86" width="28" height="18" rx="1"/>
+            <rect x="16" y="116" width="28" height="18" rx="1"/>
+            <rect x="130" y="116" width="28" height="18" rx="1"/>
+            <rect x="16" y="146" width="28" height="18" rx="1"/>
+            <rect x="130" y="146" width="28" height="18" rx="1"/>
+          </g>
+          <rect x="66" y="154" width="40" height="48" rx="1.5" fill="#1FA855"/>
+        </g>
+
+        <!-- far right low block -->
+        <g transform="translate(1028,430)">
+          <rect width="124" height="120" rx="2" fill="url(#facade)"/>
+          <rect width="124" height="8" fill="#0E1726"/>
+          <g fill="#0E1726" opacity="0.82">
+            <rect x="14" y="22" width="22" height="16" rx="1"/>
+            <rect x="48" y="22" width="22" height="16" rx="1"/>
+            <rect x="82" y="22" width="22" height="16" rx="1"/>
+            <rect x="14" y="50" width="22" height="16" rx="1"/>
+            <rect x="48" y="50" width="22" height="16" rx="1"/>
+            <rect x="82" y="50" width="22" height="16" rx="1"/>
+            <rect x="14" y="78" width="22" height="16" rx="1"/>
+            <rect x="82" y="78" width="22" height="16" rx="1"/>
+          </g>
+          <rect x="46" y="86" width="28" height="34" rx="1" fill="#1FA855"/>
+        </g>
+      </g>
+
+      <!-- promenade -->
+      <rect x="0" y="548" width="1200" height="14" fill="#F4F7FB"/>
+      <rect x="0" y="548" width="1200" height="3" fill="#1F5EFF"/>
+
+      <!-- footbridge over the lake -->
+      <g fill="none" stroke="#F4F7FB" stroke-width="7" stroke-linecap="round">
+        <path d="M470 555 Q600 492 730 555"/>
+      </g>
+      <g stroke="#1F5EFF" stroke-width="3" stroke-linecap="round">
+        <path d="M500 540 v-16 M540 522 v-16 M580 512 v-14 M620 512 v-14 M660 522 v-16 M700 540 v-16"/>
+      </g>
+      <rect x="548" y="498" width="104" height="8" rx="2" fill="#F4F7FB"/>
+
+      <!-- lake -->
+      <rect x="0" y="562" width="1200" height="68" fill="url(#lake)"/>
+      <!-- reflections -->
+      <g opacity="0.35" fill="#F4F7FB">
+        <rect x="220" y="574" width="120" height="6" rx="3"/>
+        <rect x="250" y="590" width="70" height="4" rx="2"/>
+        <rect x="860" y="576" width="130" height="6" rx="3"/>
+        <rect x="890" y="592" width="80" height="4" rx="2"/>
+      </g>
+      <g opacity="0.45" fill="#FFFFFF">
+        <rect x="80" y="582" width="46" height="3" rx="1.5"/>
+        <rect x="1080" y="586" width="54" height="3" rx="1.5"/>
+        <rect x="560" y="600" width="80" height="3" rx="1.5"/>
+      </g>
+
+      <!-- trees on the promenade, flanking the bridge -->
+      <g>
+        <g transform="translate(400,548)">
+          <rect x="-3" y="-36" width="6" height="36" rx="2" fill="#0E1726"/>
+          <ellipse cx="0" cy="-48" rx="26" ry="18" fill="#1FA855"/>
+          <ellipse cx="-14" cy="-38" rx="14" ry="10" fill="#178A46"/>
+          <ellipse cx="14" cy="-36" rx="14" ry="10" fill="#27C56A"/>
+        </g>
+        <g transform="translate(800,548)">
+          <rect x="-3" y="-42" width="6" height="42" rx="2" fill="#0E1726"/>
+          <ellipse cx="0" cy="-54" rx="28" ry="20" fill="#1FA855"/>
+          <ellipse cx="-16" cy="-42" rx="15" ry="11" fill="#178A46"/>
+          <ellipse cx="16" cy="-40" rx="15" ry="11" fill="#27C56A"/>
+        </g>
+        <g transform="translate(150,548)">
+          <rect x="-2.5" y="-28" width="5" height="28" rx="2" fill="#0E1726"/>
+          <ellipse cx="0" cy="-36" rx="18" ry="13" fill="#1FA855"/>
+        </g>
+        <g transform="translate(1060,548)">
+          <rect x="-2.5" y="-30" width="5" height="30" rx="2" fill="#0E1726"/>
+          <ellipse cx="0" cy="-40" rx="20" ry="14" fill="#1FA855"/>
+        </g>
+      </g>
+    </svg>
+
+    <div class="lockup">
+      <div class="eyebrow">DHAKA</div>
+      <h1><span>DHANMONDI</span><span>ROOMS</span></h1>
+      <div class="rule"></div>
+      <div class="tag"><span class="dot"></span>Verified rooms in Dhaka</div>
+    </div>
+  </div>
+</body>
+</html>
